@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Is my series worth watching?</h1>
+    <p>{{ title }}</p>
+
+    <table cellspacing="0">
+        <thead>
+            <tr>
+                {%  for grade in table[0] %}
+                    <td>{{ grade }}</td>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for episode_number in table %}
+                {% if not loop.first %}
+                    <tr>
+                        {% for grade in episode_number %}
+                            {% if grade|float >= 8.0 %}
+                                <td class="grade-8">{{ grade }}</td>
+                            {% elif grade|float >= 7.0 and grade|float <= 8.0 %}
+                                <td class="grade-7">{{ grade }}</td>
+                            {% else %}
+                                <td>{{ grade }}</td>
+                            {% endif %}
+                        {% endfor %}
+                    </tr>
+                {% endif %}
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

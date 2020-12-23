@@ -1,0 +1,6 @@
+__pycache__/
+title.basics.tsv
+title.episode.tsv
+title.ratings.tsv
+title.series.tsv
+.DS_Store
