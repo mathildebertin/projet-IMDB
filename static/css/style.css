@@ -21,13 +21,30 @@ tr > td:first-child {
     background: black;
 }
 
+
+.no-grade {
+    background: white;
+}
+
+
+.grade-6 {
+    background: #EB984E;
+}
+
+
 .grade-7 {
-    background: orange;
+    background: #F4D03F;
 }
 
 .grade-8 {
     background: mediumseagreen;
 }
+
+
+.grade-9 {
+    background: #1D8348;
+}
+
 
 h1 {
     text-align: center;

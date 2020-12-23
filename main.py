@@ -31,8 +31,9 @@ def create_grades_table(title):
     seasons = []
     nb_eps = []
     for ep in list_data:
-        seasons.append(int(ep[0]))
-        nb_eps.append(int(ep[1]))
+        if ep[0] != '\\N' and ep[1] != '\\N' :
+            seasons.append(int(ep[0]))
+            nb_eps.append(int(ep[1]))
     nb_eps = sorted(set(nb_eps))
     data.append([""]+sorted(set(seasons)))
 
