@@ -5,6 +5,7 @@ from functions import find_rated_episodes
 
 def create_grades_table(title):
     series_id = find_id_by_title(title)
+    print(series_id)
     episodes_data = find_episodes_by_series(series_id)
     episodes_id = []
     for ep in episodes_data:
@@ -31,11 +32,11 @@ def create_grades_table(title):
     seasons = []
     nb_eps = []
     for ep in list_data:
-        if ep[0] != '\\N' and ep[1] != '\\N' :
+        if ep[0] != '\\N' and ep[1] != '\\N':
             seasons.append(int(ep[0]))
             nb_eps.append(int(ep[1]))
     nb_eps = sorted(set(nb_eps))
-    data.append([""]+sorted(set(seasons)))
+    data.append([""] + sorted(set(seasons)))
 
     for i in nb_eps:
         grades_list = [str(i)]
@@ -44,4 +45,4 @@ def create_grades_table(title):
                 grades_list.append(ep[2])
         data.append(grades_list)
         grades_list = []
-    return(data)
+    return data

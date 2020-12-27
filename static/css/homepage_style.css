@@ -1,0 +1,147 @@
+
+form{
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  height: 7vh;
+}
+
+form .fa-search {
+  color: white;
+}
+
+body{
+  background: #f2f2f2;
+  font-family: Optima, sans-serif;
+  font-size: large;
+  text-align: center;
+  color: #566573;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  justify-content: center;
+}
+
+
+input[type=text]{
+  border-radius: 4px;
+  border : 2px black;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+button{
+  background: #EDBB99;
+  padding: 0 1rem;
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+body {
+    text-align: center;
+    color: #566573;
+    font-family: Optima, sans-serif;
+}
+
+td {
+    width: 30px;
+    text-align: center;
+}
+
+table {
+    color : black;
+    margin: 0 auto;
+}
+
+thead > tr {
+    color: white;
+    background: black;
+}
+
+tr > td:first-child {
+    color: white;
+    background: black;
+}
+
+
+.no-grade {
+    background: none;
+}
+
+
+.grade-3-5 {
+    background: #BA4A00;
+}
+
+
+.grade-4 {
+    background: #D35400;
+}
+
+
+.grade-4-5 {
+    background: #CA6F1E;
+}
+
+
+.grade-5 {
+    background: #E67E22;
+}
+
+
+.grade-5-5 {
+    background: #F39C12;
+}
+
+
+.grade-6 {
+    background: #D4AC0D;
+}
+
+
+.grade-6-5 {
+    background: #F4D03F;
+}
+
+.grade-7 {
+    background: #2ECC71;
+}
+
+
+.grade-7-5 {
+    background: #28B463;
+}
+
+.grade-8 {
+    background: #239B56;
+}
+
+
+.grade-8-5 {
+    background: #1D8348;
+}
+
+
+.grade-9 {
+    background: #186A3B;
+}
+
+
+.grade-9-5 {
+    background: #196F3D;
+}
+
+
+.grade-10 {
+    background: #145A32;
+}
+
+
+h1 {
+    text-align: center;
+    font-family: Optima, sans-serif;
+}

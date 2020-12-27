@@ -1,22 +1,20 @@
-from flask import Flask, render_template
+from flask import Flask, request, render_template
 from main import create_grades_table
 app = Flask(__name__)
 
-title = "The Simpsons"
 
 @app.route('/')
-def homepage():
+def form():
     return render_template('homepage.html.jinja2')
 
-@app.route('/results')
-def index():
-    grades_table = create_grades_table(title)
-    return render_template('index.html.jinja2', title=title, table = grades_table)
+
+@app.route('/results', methods=['GET','POST'])
+def results():
+    if request.method == 'POST':
+        title = request.form["Title"]
+        grades_table = create_grades_table(title)
+        return render_template('index.html.jinja2', title = title, table=grades_table)
 
 
-@app.route('/<int:post_id>', methods = ['POST'])
-def show_post(post_id):
-    # show the post with the given id, the id is an integer
-    return 'Post %d' % post_id
 
 
