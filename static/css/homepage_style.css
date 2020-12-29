@@ -6,9 +6,25 @@ form{
   height: 7vh;
 }
 
+tbody>tr:first-child>td{
+    background: #f2f2f2;
+    color: #566573;
+}
+
+tbody>tr>td>p{
+    background-color:#f2f2f2;
+    color:#566573;
+    font-weight: normal;
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+    transform: rotate(-180deg);
+}
+
+
 form .fa-search {
   color: white;
 }
+
 
 body{
   background: #f2f2f2;
@@ -32,6 +48,7 @@ input[type=text]{
   padding: 0 1rem;
 }
 
+
 button{
   background: #EDBB99;
   padding: 0 1rem;
@@ -41,26 +58,31 @@ button{
 }
 
 
-body {
-    text-align: center;
-    color: #566573;
-    font-family: Optima, sans-serif;
-}
-
 td {
     width: 30px;
     text-align: center;
 }
+
 
 table {
     color : black;
     margin: 0 auto;
 }
 
+thead>tr>td:first-child{
+    background-color: #f2f2f2;
+}
+
+thead>tr:first-child{
+    background: #f2f2f2;
+    color: #566573;
+}
+
 thead > tr {
     color: white;
     background: black;
 }
+
 
 tr > td:first-child {
     color: white;

@@ -5,16 +5,15 @@ from functions import find_rated_episodes
 
 def create_grades_table(title):
     series_id = find_id_by_title(title)
-    print(series_id)
     episodes_data = find_episodes_by_series(series_id)
     episodes_id = []
     for ep in episodes_data:
         episodes_id.append(ep[0])
     rated_episodes = find_rated_episodes(episodes_id)
     for ep in episodes_data:
-        for id in rated_episodes:
-            if ep[0] == id[0]:
-                ep.append(id[1])
+        for ep_id in rated_episodes:
+            if ep[0] == ep_id[0]:
+                ep.append(ep_id[1])
         if len(ep) <= 3:
             ep.append("")
         del (ep[0])

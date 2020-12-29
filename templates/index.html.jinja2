@@ -14,12 +14,18 @@
     <table cellspacing="0">
         <thead>
         <tr>
+            <td>&nbsp;</td>
+            <td colspan="100%">seasons</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
             {% for grade in table[0] %}
                 <td>{{ grade }}</td>
             {% endfor %}
         </tr>
         </thead>
         <tbody>
+            <td rowspan="100%" ><p>episodes</p></td>
         {% for episode_number in table %}
             {% if not loop.first %}
                 <tr>

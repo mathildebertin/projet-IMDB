@@ -8,13 +8,9 @@ def form():
     return render_template('homepage.html.jinja2')
 
 
-@app.route('/results', methods=['GET','POST'])
+@app.route('/results', methods=['GET', 'POST'])
 def results():
     if request.method == 'POST':
         title = request.form["Title"]
         grades_table = create_grades_table(title)
-        return render_template('index.html.jinja2', title = title, table=grades_table)
-
-
-
-
+        return render_template('index.html.jinja2', title=title, table=grades_table)

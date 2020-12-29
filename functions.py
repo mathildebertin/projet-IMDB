@@ -1,5 +1,6 @@
 import csv
 
+
 def find_id_by_title(series_title):
     with open("title.series.tsv", "r") as file:
         data = csv.reader(file, delimiter="\t")
@@ -7,7 +8,6 @@ def find_id_by_title(series_title):
         for row in data:
             if clear(row[1]) == clear(series_title):
                 return row[0]
-
 
 
 def find_episodes_by_series(series_id):
@@ -28,9 +28,10 @@ def find_rated_episodes(episodes_id):
         for row in data:
             if row[0] in episodes_id:
                 rated_episodes.append(row[:2])
-        return(rated_episodes)
+        return rated_episodes
 
-def clear(title) :
+
+def clear(title):
     lower_title = title.lower()
     cleared_title = ''.join(e for e in lower_title if e.isalnum())
     return cleared_title
