@@ -7,7 +7,7 @@ def find_id_by_title(series_title):
 
         for row in data:
             if clear(row[1]) == clear(series_title):
-                return row[0]
+                return row[0], row[1]
 
 
 def find_episodes_by_series(series_id):

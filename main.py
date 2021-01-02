@@ -4,7 +4,7 @@ from functions import find_rated_episodes
 
 
 def create_grades_table(title):
-    series_id = find_id_by_title(title)
+    series_id, series_title = find_id_by_title(title)
     episodes_data = find_episodes_by_series(series_id)
     episodes_id = []
     for ep in episodes_data:
@@ -44,4 +44,4 @@ def create_grades_table(title):
                 grades_list.append(ep[2])
         data.append(grades_list)
         grades_list = []
-    return data
+    return data, series_title.upper()

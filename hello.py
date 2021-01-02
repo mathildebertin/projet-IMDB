@@ -12,5 +12,5 @@ def form():
 def results():
     if request.method == 'POST':
         title = request.form["Title"]
-        grades_table = create_grades_table(title)
-        return render_template('index.html.jinja2', title=title, table=grades_table)
+        grades_table, series_title = create_grades_table(title)
+        return render_template('index.html.jinja2', title=series_title, table=grades_table)

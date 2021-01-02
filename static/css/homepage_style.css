@@ -7,13 +7,13 @@ form{
 }
 
 tbody>tr:first-child>td{
-    background: #f2f2f2;
-    color: #566573;
+    background: #E50914;
+    color: white;
 }
 
 tbody>tr>td>p{
-    background-color:#f2f2f2;
-    color:#566573;
+    background-color:#E50914;
+    color:white;
     font-weight: normal;
     writing-mode: vertical-lr;
     text-orientation: mixed;
@@ -25,19 +25,26 @@ form .fa-search {
   color: white;
 }
 
+h1{
+  font-family: 'Bebas Neue', cursive;
+  text-shadow: -1px 0 black, 0 6px black, 1px 0 black, 0 -1px black;
+  letter-spacing: .05em;
+  font-size: xxx-large;
+}
 
 body{
-  background: #f2f2f2;
-  font-family: Optima, sans-serif;
+  background: #E50914;
+  font-family: Roboto, sans-serif;
   font-size: large;
   text-align: center;
-  color: #566573;
+  color: white;
   height: 100vh;
   width: 100%;
   display: flex;
   align-items: center;
   margin: 0;
   justify-content: center;
+  font-weight: normal;
 }
 
 
@@ -50,7 +57,7 @@ input[type=text]{
 
 
 button{
-  background: #EDBB99;
+  background: grey;
   padding: 0 1rem;
   border: 0;
   border-radius: 4px;
@@ -67,15 +74,16 @@ td {
 table {
     color : black;
     margin: 0 auto;
+    font-family: Optima, sans-serif;
 }
 
 thead>tr>td:first-child{
-    background-color: #f2f2f2;
+    background-color: #E50914;
 }
 
 thead>tr:first-child{
-    background: #f2f2f2;
-    color: #566573;
+    background: #E50914;
+    color: white;
 }
 
 thead > tr {
@@ -162,8 +170,8 @@ tr > td:first-child {
     background: #145A32;
 }
 
-
-h1 {
-    text-align: center;
-    font-family: Optima, sans-serif;
+.fa-couch{
+    color: grey;
+    text-shadow: none;
+    opacity: 0.67;
 }
