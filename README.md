@@ -31,10 +31,14 @@ Ce sont les fichiers qui contiennent notre code python.
 
 ## II. Comment faire fonctionner le programme?
 ### 1ère étape :
-Après avoir téléchargé tous les fichiers, il faut installer les packages nécessaires à l'aide du fichier requirements.txt. Pour cela, il suffit de taper la commande <'pip install'> dans le terminal.
+Téléchargez les fichiers IMDB nécessaires à l'aide des liens suivants et les décompresser : 
+* [title.episode.tsv](https://datasets.imdbws.com/title.episode.tsv.gz)
+* [title.ratings.tsv](https://datasets.imdbws.com/title.ratings.tsv.gz)
+
+Après avoir téléchargé tous les fichiers, il faut installer les packages nécessaires à l'aide du fichier requirements.txt. Pour cela, il suffit de taper la commande `pip install -r requirements.txt` dans le terminal.
 
 ### 2ème étape :
-Ensuite, pour accéder à la page web il suffit de taper la commande <'flask run'> dans le terminal ; puis de cliquer sur lien qui sera affiché dans le terminal après "Running on...".
+Ensuite, pour accéder à la page web il suffit de taper la commande `flask run` dans le terminal ; puis de cliquer sur [le lien](http://127.0.0.1:5000/) qui sera affiché dans le terminal.
 
 ### 3ème étape :
 Pour obtenir les résultats des notes obtenues par une série, il suffit de taper le nom de la série dans la barre de recherche sans se soucier des majuscules ou des caractères spéciaux puis de cliquer sur la loupe.
