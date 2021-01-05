@@ -1,13 +1,13 @@
 # Comment utiliser "Is my series worth watching?"
 ## I. Les fichiers
-### 1) Le dossier static
-Il contient
-#### a. Le dossier css
-Il contient les fichiers .css qui nous permettent d'éditer le style du site : les couleurs, les formes, la mise en page...
-#### b. Le dossier lib
+### 1) Le dossier "static"
+Il contient les fichiers qui n'ont pas à être exécutés. 
+#### a. Le dossier "css"
+Il contient les fichiers *.css* qui nous permettent d'éditer le style du site : les couleurs, les formes, la mise en page...
+#### b. Le dossier "lib"
 Il contient les libraires externes que nous avons utilisées pour les sites, notamment la librairie fontawesome qui nous permet d'ajouter des icônes
 ### 2) Le dossier templates
-Il contient les fichiers html nous permettant de gérer les éléments qui constituent les pages web:
+Il contient les fichiers *.html* nous permettant de gérer les éléments qui constituent les pages web :
 
 * Le fichier *homepage.html* contient les données de la page d'accueil.
 * Le fichier *index.html* contient les données de la page de résultats.
@@ -15,7 +15,7 @@ Il contient les fichiers html nous permettant de gérer les éléments qui const
 ### 3) Les fichiers .tsv
 Ce sont les fichiers qui contiennent les données d'IMDB et dont nous avons besoin :
 
-* Le fichier *title.series.tsv*, que l'on a créé à partir du fichier *title.basics.tsv*, contient les id alphanumériques correspondant à chaque série ainsi que le titre le plus utilisé.
+* Le fichier *title.series.tsv* que l'on a créé à partir du fichier *title.basics.tsv*, contient les id alphanumériques correspondant à chaque série ainsi que le titre le plus utilisé.
 * Le fichier *title.episode.tsv* contient les id alphanumériques correspondant à chaque épisode, l'id alphanumérique de la série dont ils proviennent, la saison dont ils proviennent et leur numéro dans la saison.
 * Le fichier *title.ratings.tsv* contient les id alphanumériques correspondant à chaque épisode, la note moyenne qui leur a été attribuée par les utilisateurs ainsi que le nombre de personnes qui ont voté.
 
