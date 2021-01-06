@@ -15,7 +15,7 @@ Il contient les fichiers *.html* nous permettant de gérer les éléments qui co
 ### 3) Les fichiers .tsv
 Ce sont les fichiers qui contiennent les données d'IMDB et dont nous avons besoin :
 
-* Le fichier *title.series.tsv* que l'on a créé à partir du fichier *title.basics.tsv*, contient les id alphanumériques correspondant à chaque série ainsi que le titre le plus utilisé.
+* Le fichier *title.series.tsv* contient les id alphanumériques correspondant à chaque série ainsi que le titre le plus utilisé. On l'on a créé à partir du fichier *title.basics.tsv* pour avoir un fichier moins dense car ne contenait pas que des infos sur les titres de séries mais aussi les films, les courts métrages etc...
 * Le fichier *title.episode.tsv* contient les id alphanumériques correspondant à chaque épisode, l'id alphanumérique de la série dont ils proviennent, la saison dont ils proviennent et leur numéro dans la saison.
 * Le fichier *title.ratings.tsv* contient les id alphanumériques correspondant à chaque épisode, la note moyenne qui leur a été attribuée par les utilisateurs ainsi que le nombre de personnes qui ont voté.
 

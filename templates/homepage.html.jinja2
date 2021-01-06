@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/homepage_style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='lib/font-awesome-4.7.0/css/font-awesome.min.css') }}">
-    <link rel="icon" href="{{ url_for('static',filename="popcorn.ico") }}" >
+    <link rel="icon" href="{{ url_for('static',filename="img/popcorn.ico") }}" >
     <title>Homepage</title>
 </head>
 <body>
 <main>
-    <img style="width:200px;height:100px;" alt="popcorn" src="popcorn.png"
+    <img style="height:125px;" alt="popcorn" src="static/img/popcorn.png">
     <h1>IS MY SERIES WORTH WATCHING ?</h1>
     <form action="/results" method="POST">
         <input type="text" name="Title" placeholder="What do you want to watch?"/>

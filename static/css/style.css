@@ -1,8 +1,6 @@
 
 form{
   display: flex;
-  justify-content: center;
-  align-items: stretch;
   height: 7vh;
 }
 
@@ -28,23 +26,19 @@ form .fa-search {
 h1{
   font-family: 'Bebas Neue', cursive;
   text-shadow: -1px 0 black, 0 6px black, 1px 0 black, 0 -1px black;
-  letter-spacing: .05em;
+  letter-spacing: .07em;
   font-size: xxx-large;
 }
 
 body{
   background: #E50914;
-  font-family: Roboto, sans-serif;
   font-size: large;
   text-align: center;
   color: white;
   min-height: 100vh;
-  width: 100%;
   display: flex;
   align-items: center;
-  margin: 0;
   justify-content: center;
-  font-weight: normal;
 }
 
 
@@ -67,7 +61,6 @@ button{
 
 td {
     width: 30px;
-    text-align: center;
 }
 
 
@@ -75,6 +68,7 @@ table {
     color : black;
     margin: 0 auto;
     font-family: Optima, sans-serif;
+    border-spacing: 0;
 }
 
 thead>tr>td:first-child{
@@ -83,7 +77,6 @@ thead>tr>td:first-child{
 
 thead>tr:first-child{
     background: #E50914;
-    color: white;
 }
 
 thead > tr {

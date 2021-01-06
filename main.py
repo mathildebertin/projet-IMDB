@@ -17,7 +17,6 @@ def create_grades_table(title):
         if len(ep) <= 3:
             ep.append("")
         del (ep[0])
-
     dict_data = []
     keys = ["season", "episode", "grade"]
     for ep in episodes_data:
@@ -36,12 +35,10 @@ def create_grades_table(title):
             nb_eps.append(int(ep[1]))
     nb_eps = sorted(set(nb_eps))
     data.append([""] + sorted(set(seasons)))
-
     for i in nb_eps:
         grades_list = [str(i)]
         for ep in list_data:
             if ep[1] == str(i):
                 grades_list.append(ep[2])
         data.append(grades_list)
-        grades_list = []
     return data, series_title.upper()
