@@ -13,7 +13,45 @@
 <body>
 <main>
     <h1>IS "{{ title }}" WORTH WATCHING?</h1>
-    <table>
+    <table id="legend">
+        <tr>
+            <td style="width:30px; background: #943126;"></td>
+            <td style="width:30px; background: #b03a2e;"></td>
+            <td style="width:30px; background: #cb4335;"></td>
+            <td style="width:30px; background: #d35400;"></td>
+            <td style="width:auto">You definitely you should watch something else</td>
+        </tr>
+        <tr>
+            <td style="width:30px; background: #ca6f1e;"></td>
+            <td style="width:30px; background: #dc7633;"></td>
+            <td style="width:30px; background: #e67e22;"></td>
+            <td style="width:30px; background: #eb984e;"></td>
+            <td style="width:auto">Not amazing, you could do better</td>
+        </tr>
+        <tr>
+            <td style="width:30px; background: #e59866;"></td>
+            <td style="width:30px; background: #f0b27a;"></td>
+            <td style="width:30px; background: #A2D9CE;"></td>
+            <td style="width:30px; background: #76D7C4;"></td>
+            <td style="width:auto">Not bad, go for it!</td>
+        </tr>
+        <tr>
+            <td style="width:30px; background: #73C6B6;"></td>
+            <td style="width:30px; background: #48C9B0;"></td>
+            <td style="width:30px; background: #45B39D;"></td>
+            <td style="width:30px; background: #1ABC9C;"></td>
+            <td style="width:auto">Seems good! You should enjoy it</td>
+        </tr>
+        <tr>
+            <td style="width:30px; background: #17A589;"></td>
+            <td style="width:30px; background: #148F77;"></td>
+            <td style="width:30px; background: #117864;"></td>
+            <td style="width:30px; background: #0E6251;"></td>
+            <td style="width:auto">No doubt: it is so worth watching!</td>
+        </tr>
+    </table>
+    <br><br>
+    <table id="results">
         <thead>
         <tr>
             <td>&nbsp;</td>
@@ -32,7 +70,23 @@
             {% if not loop.first %}
                 <tr>
                     {% for grade in episode_number %}
-                        {% if grade|float >= 3.5 and grade|float <= 4.0 %}
+                        {% if grade=="" %}
+                            <td class="no-grade">{{ grade }}</td>
+                        {% elif grade|float >= 0.0 and grade|float <= 0.5 %}
+                            <td class="grade-0">{{ grade }}</td>
+                        {% elif grade|float >= 0.5 and grade|float <= 1.0 %}
+                            <td class="grade-0-5">{{ grade }}</td>
+                        {% elif grade|float >= 1.0 and grade|float <= 1.5 %}
+                            <td class="grade-1">{{ grade }}</td>
+                        {% elif grade|float >= 1.5 and grade|float <= 2.0 %}
+                            <td class="grade-1-5">{{ grade }}</td>
+                        {% elif grade|float >= 2.0 and grade|float <= 2.5 %}
+                            <td class="grade-2">{{ grade }}</td>
+                        {% elif grade|float >= 2.5 and grade|float <= 3.0 %}
+                            <td class="grade-2-5">{{ grade }}</td>
+                        {% elif grade|float >= 3.0 and grade|float <= 3.5 %}
+                            <td class="grade-3">{{ grade }}</td>
+                        {% elif grade|float >= 3.5 and grade|float <= 4.0 %}
                             <td class="grade-3-5">{{ grade }}</td>
                         {% elif grade|float >= 4.0 and grade|float <= 4.5 %}
                             <td class="grade-4">{{ grade }}</td>
@@ -58,8 +112,6 @@
                             <td class="grade-9">{{ grade }}</td>
                         {% elif grade|float >= 9.5 and grade|float <= 10.0 %}
                             <td class="grade-9-5">{{ grade }}</td>
-                        {% elif grade=="" %}
-                            <td class="no-grade">{{ grade }}</td>
                         {% else %}
                             <td>{{ grade }}</td>
                         {% endif %}
