@@ -4,7 +4,11 @@ from functions import find_rated_episodes
 
 
 def create_grades_table(title):
-    series_id, series_title = find_id_by_title(title)
+    if not find_id_by_title(title):
+        series_title = ""
+        return "", ""
+    else:
+        series_id, series_title = find_id_by_title(title)
     episodes_data = find_episodes_by_series(series_id)
     episodes_id = []
     for ep in episodes_data:
