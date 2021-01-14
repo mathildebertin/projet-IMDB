@@ -17,7 +17,7 @@ def find_episodes_by_series(series_id):
         for row in data:
             if row[1] == series_id:
                 episodes.append([row[0], row[2], row[3]])
-    return episodes
+        return episodes
 
 
 def find_rated_episodes(episodes_id):
